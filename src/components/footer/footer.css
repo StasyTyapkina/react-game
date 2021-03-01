@@ -3,11 +3,11 @@ a,
 a:after,
 a:visited{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--color-light);
 }
 
 a:hover{
-    color: rgb(173, 163, 24);
+    color: var(--color-yellow);
 }
 
 .footer{
