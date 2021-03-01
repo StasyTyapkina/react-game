@@ -1,0 +1,31 @@
+
+a,
+a:after,
+a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: rgb(173, 163, 24);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 30px;
+    margin: 0 10px;
+}
+
+.link{
+    cursor: pointer;
+}
+
+.copyright{
+    font-size: 14px;
+    margin: 0 10px;
+}
