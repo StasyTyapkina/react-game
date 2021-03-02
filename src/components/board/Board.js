@@ -1,9 +1,13 @@
 import React, {useState} from 'react'
 import useSound from 'use-sound';
 import './board.css'
+
 import Square from '../square/Square'
 import calculateWinner from '../../winnerLogic'
 import GameOver from '../gameOver/GameOver'
+import StartButton from '../buttons/StartButton'
+import SettinsButton from '../buttons/SettinsButton'
+
 import soundSquare from '../music/Chord_3.mp3';
 
 const Board = () => {
@@ -51,7 +55,12 @@ const Board = () => {
                         value = {square} 
                         onClick = {() => handleClick(index)} />
                 ))}
-            </div>  
+            </div> 
+            <div className = 'button_section'>
+                <StartButton onClick = {() => handleStart()} />
+                <SettinsButton />
+            </div> 
+           
         </div>
     )
 

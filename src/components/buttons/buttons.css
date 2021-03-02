@@ -1,0 +1,21 @@
+.button_section{
+    display: flex;
+    justify-content: center; 
+}
+
+.bttn{
+    border: 1px solid var(--color-yellow-light);
+    background-color:var(--color-black);
+    font-size: 16px;
+    color: var(--color-light);
+    margin: 10px 10px 0;
+    padding: 5px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    width: 120px;
+}
+
+.bttn:hover {
+    box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+}
+
