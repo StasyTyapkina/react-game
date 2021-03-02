@@ -1,16 +1,21 @@
 
   .square {
-    border: 1px solid var(--color-yellow-light);
     position: relative;
     overflow: hidden;
-    color: var(--color-light);
+    border: 1px solid var(--color-yellow-light);
     background-color:var(--color-black);
     width: 100px;
     height: 100px;
+    font-size: 50px;
+    color: var(--color-light);
+    text-shadow:
+      3px 0px 0 rgb(128,128,128),
+      4px 0px 0 rgb(85,85,85),
+      5px 0px 0 rgb(43,43,43);
   }
   
   .square:hover {
-    box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+   box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
   }
   
   .square:before {
@@ -18,13 +23,25 @@
     position: absolute;
     top: 0;
     left: -100%;
-    width: 100%;
+    width: 200%;
     height: 100%;
-    background: linear-gradient(200deg,transparent,var(--color-yellow-rgba),transparent);
-    transition: all 0.8s ease-in;
+    background: 
+      linear-gradient(
+        230deg,
+        transparent,
+        var(--color-yellow-rgba),
+        transparent
+      );
+    transition: all 650ms;
   }
   
   .square:hover:before {
     left: 100%;
   }
-  
+
+  .square, 
+  .square:active, 
+  .square:focus {
+    outline: none;
+    padding: 0;
+  }

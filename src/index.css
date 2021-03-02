@@ -2,12 +2,17 @@
   --color-black: #000000;
   --color-light: #FFFFFF;
   --color-yellow: #f3e304;
-  --color-yellow-rgba: rgba(243, 227, 4, 0.4);
+  --color-yellow-rgba: rgba(240, 225, 14, 0.308);
   --color-yellow-light:#e6db4e;
 }
 
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,17 +23,8 @@ body {
   color: var(--color-light);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .app {
   display: grid;
   place-items: center;
   height: 100vh;
-}
-
-h1 {
-  margin: 0;
 }

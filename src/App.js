@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import Footer from './components/footer/Footer'
-import Square from './components/square/Square';
+import Board from './components/board/Board'
 
 
 const App = ()=>{
   return (
     <div className = 'app'>
       <h1>Tic-Tac-Toe React Game</h1>
-      <Square/>
+      <Board/>
       <Footer/>
     </div>
   );

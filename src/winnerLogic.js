@@ -17,3 +17,5 @@ function calculateWinner(squares) {
     }
     return null;
   } //from https://ru.reactjs.org/tutorial/tutorial.html
+
+  export default calculateWinner
