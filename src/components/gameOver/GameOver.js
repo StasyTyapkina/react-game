@@ -1,15 +1,20 @@
 import React from 'react'
+import './gameOver.css'
+import soundGameOver from '../music/success.mp3';
 
 function GameOver(props) {
+
+  const mainAudio = new Audio(soundGameOver);
+  mainAudio.play()
+
     return (
       <div className="game_over">
-      
         <div>
-            <h2>Congratulations!</h2>
-            <h2>Winner is: {props.winner}</h2>
+            <h3>Congratulations!</h3>
+            <p>Winner is: {props.winner}</p>
         </div>
        
-        <button className="start_bttn" onClick={props.onClick}>
+        <button className="restart_bttn" onClick={props.onClick}>
           Restart
         </button>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './components/footer/Footer'
 import Board from './components/board/Board'
+import Music from './components/music/Music'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
 
@@ -12,9 +13,9 @@ const App = ()=>{
 
       <button 
         className = 'fullScreen_bttn'
-        onClick={handle.enter}
-        title = 'Нажмите, чтобы развернуть игру на весь экран'>
-          <i className = 'fas fa-expand-arrows-alt fullScreen_icon'/>
+        onClick = {handle.enter}
+        title = 'Click for full screen'>
+          <i className = 'fas fa-expand-arrows-alt'/>
       </button>
 
       <h1>Tic-Tac-Toe React Game</h1>
@@ -22,6 +23,8 @@ const App = ()=>{
       <FullScreen handle={handle}>
         <Board/>
       </FullScreen>
+
+     
 
       <Footer/>
       

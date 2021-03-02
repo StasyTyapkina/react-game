@@ -1,0 +1,15 @@
+
+.sound_bttn{
+    border: 1px solid var(--color-yellow-light);
+    background-color:var(--color-black);
+    width: 30px;
+    font-size: 16px;
+    color: var(--color-light);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.sound_bttn:hover {
+    box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+    color: var(--color-yellow);
+}

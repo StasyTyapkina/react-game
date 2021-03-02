@@ -12,6 +12,14 @@
   box-sizing: border-box;
 }
 
+button, 
+button:active, 
+button:focus,
+audio,
+video {
+  outline: none;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -29,16 +37,21 @@ body {
   height: 100vh;
 }
 
-.fullScreen_icon{
-  width: 25px;
-  background: var(--color-light);
+.fullScreen_bttn{
+  border: 1px solid var(--color-yellow-light);
+  background-color:var(--color-black);
+  width: 30px;
+  font-size: 16px;
+  color: var(--color-light);
+  padding: 5px;
+  cursor: pointer;
 }
 
-.fullScreen_icon:hover{
+.fullScreen_bttn:hover {
+  box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
   color: var(--color-yellow);
 }
 
-.fullScreen_bttn:hover{
-  box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
-  cursor: pointer;
-}
+
+
+

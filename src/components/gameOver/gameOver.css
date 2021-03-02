@@ -1,0 +1,25 @@
+.game_over{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.restart_bttn{
+    border: 1px solid var(--color-yellow-light);
+    background-color:var(--color-black);
+    font-size: 16px;
+    color: var(--color-light);
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.restart_bttn:hover {
+    box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+}
+
+.fullscreen-enabled .restart_bttn{
+    width: 520px;
+}
