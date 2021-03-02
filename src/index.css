@@ -28,3 +28,17 @@ body {
   place-items: center;
   height: 100vh;
 }
+
+.fullScreen_icon{
+  width: 25px;
+  background: var(--color-light);
+}
+
+.fullScreen_icon:hover{
+  color: var(--color-yellow);
+}
+
+.fullScreen_bttn:hover{
+  box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+  cursor: pointer;
+}

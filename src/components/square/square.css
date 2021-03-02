@@ -49,3 +49,10 @@
   .square:active {
     box-shadow: 1px 1px 25px 10px var(--color-yellow-light);
   }
+
+  
+.fullscreen-enabled .square{
+  width: 150px;
+  height: 150px;
+  font-size: 80px;
+}
