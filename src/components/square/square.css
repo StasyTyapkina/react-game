@@ -9,7 +9,7 @@
     font-size: 50px;
     color: var(--color-light);
     text-shadow:
-      3px 0px 0 rgb(128,128,128),
+      3px 0px 0 rgb(168, 165, 165),
       4px 0px 0 rgb(85,85,85),
       5px 0px 0 rgb(43,43,43);
   }
@@ -44,4 +44,8 @@
   .square:focus {
     outline: none;
     padding: 0;
+  }
+
+  .square:active {
+    box-shadow: 1px 1px 25px 10px var(--color-yellow-light);
   }

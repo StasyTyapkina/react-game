@@ -1,9 +1,9 @@
 :root{
-  --color-black: #000000;
-  --color-light: #FFFFFF;
-  --color-yellow: #f3e304;
-  --color-yellow-rgba: rgba(240, 225, 14, 0.308);
-  --color-yellow-light:#e6db4e;
+  --color-black: rgb(0, 0, 0);
+  --color-light: rgb(255, 255, 255);
+  --color-yellow: rgb(243, 227, 4);
+  --color-yellow-light:rgb(230, 219, 78);
+  --color-yellow-rgba: rgba(240, 225, 14, 0.3);
 }
 
 * {
