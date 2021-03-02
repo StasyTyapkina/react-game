@@ -1,45 +1,45 @@
-import React from 'react';
-import './footer.css';
-import rsLogo from './rs_school_logo.png';
-import gitLogo from './GitHub.png';
+import React from 'react'
+import './footer.css'
+import rsLogo from './rs_school_logo.png'
+import gitLogo from './GitHub.png'
 
 const Footer = () => {
     return(
-       <div className="footer">
-            <p className="copyright">Created by &nbsp; 
+       <div className = 'footer'>
+            <p className  = 'copyright'> Created by &nbsp; 
                 <a 
-                    href="https://github.com/StasyTyapkina" 
-                    target="_blank"
-                    rel="noopener noreferrer">
+                    href = 'https://github.com/StasyTyapkina'
+                    target = '_blank'
+                    rel = 'noopener noreferrer'>
                     A.Tyapkina
                 </a>
                 &nbsp; 2021
             </p>   
             <a 
-                className="link" 
-                href="https://rs.school/index.html" 
-                target="_blank" 
-                rel="noopener noreferrer">
+                className = 'link' 
+                href = 'https://rs.school/index.html' 
+                target = '_blank'
+                rel = 'noopener noreferrer'>
                 <img  
-                    className="logo"
+                    className = 'logo'
                     src = {rsLogo} 
-                    alt="logo" />
+                    alt = 'logo' />
             </a>
             <a 
-                className="link"
-                href="https://github.com/StasyTyapkina" 
-                target="_blank" 
-                rel="noopener noreferrer">
+                className = 'link'
+                href = 'https://github.com/StasyTyapkina'
+                target = '_blank'
+                rel = 'noopener noreferrer'>
                 <img 
-                    className="logo"
+                    className = 'logo'
                     src = {gitLogo} 
-                    alt="logo" />
+                    alt = 'logo'/>
             </a>
         </div>
     ) 
   }
   
-  export default Footer;
+  export default Footer
   
 
 

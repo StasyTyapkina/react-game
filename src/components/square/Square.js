@@ -1,5 +1,5 @@
-import React from 'react';
-import './square.css';
+import React from 'react'
+import './square.css'
 
 const Square = (props) => {
   return(

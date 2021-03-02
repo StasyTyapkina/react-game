@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './components/footer/Footer'
 import Board from './components/board/Board'
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
 
 const App = ()=>{
@@ -26,7 +26,7 @@ const App = ()=>{
       <Footer/>
       
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

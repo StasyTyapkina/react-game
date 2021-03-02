@@ -1,28 +1,42 @@
-import React, {useState} from 'react';
-import './board.css';
-import Square from '../square/Square';
-import calculateWinner from "../../winnerLogic";
+import React, {useState} from 'react'
+import './board.css'
+import Square from '../square/Square'
+import calculateWinner from '../../winnerLogic'
+import GameOver from '../gameOver/GameOver'
 
 const Board = () => {
 
-    const [squares, setSquares] = useState(Array(9).fill(null));
-    const [isXNext, setIsXNext] = useState(true);
-    const winner = calculateWinner(squares)
+    const [squares, setSquares] = useState(Array(9).fill(null))
+    const [isXNext, setIsXNext] = useState(true)
+    let winner = calculateWinner(squares)
 
     function handleClick(i){
         const newSquares = [...squares]
+        
+        if(newSquares[i] || winner) return
 
-        if(newSquares[i] || winner) return;
+        newSquares[i] = isXNext ? 'X' : 'O'
 
-        newSquares[i] = isXNext ? "X" : "O";
-
-        setSquares(newSquares);
-        setIsXNext(!isXNext);
+        setSquares(newSquares)
+        setIsXNext(!isXNext)
     }
+
+    function handleStart() {
+        setSquares(Array(9).fill(null));
+        winner = null;
+      }
+
+    const gameStatus = winner ? <GameOver 
+                                    winner = {winner}
+                                    onClick = {() => handleStart()}
+                                /> 
+                                : `Next Player: ${isXNext ? 'X' : 'O'}`
 
     return(
        <div >
-            <h3>Winner is: {winner}</h3>
+            <h2>
+                {gameStatus}
+            </h2>
             <div className = 'board'>
                 {squares.map((square, index) => (
                     <Square 
