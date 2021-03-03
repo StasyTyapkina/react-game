@@ -1,21 +1,17 @@
 import React, {useState} from 'react'
 import useSound from 'use-sound';
 import './board.css'
-
 import Square from '../square/Square'
 import calculateWinner from '../../winnerLogic'
 import GameOver from '../gameOver/GameOver'
 import Button from '../button/Button'
-
 import ModalWindow from '../modal/ModalWindow'
-
 import soundSquare from '../music/Chord_3.mp3';
 
 const Board = () => {
 
     const [squares, setSquares] = useState(Array(9).fill(null))
     const [isXNext, setIsXNext] = useState(true)
-    //const [winner, setWinner] = useState('')
     let winner = calculateWinner(squares)
     const [play] = useSound(soundSquare);
 
@@ -28,7 +24,6 @@ const Board = () => {
         setSquares(newSquares)
         setIsXNext(!isXNext)
         play()
-       // setWinner(winner)
     }
 
     function handleStart() {
@@ -67,7 +62,6 @@ const Board = () => {
                
                 <ModalWindow />
             </div> 
-           
         </div>
     )
 

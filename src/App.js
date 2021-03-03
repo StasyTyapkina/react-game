@@ -2,7 +2,6 @@ import React from 'react'
 import Footer from './components/footer/Footer'
 import Board from './components/board/Board'
 import Button from './components/button/Button'
-import Music from './components/music/Music'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
 
@@ -11,7 +10,7 @@ const App = ()=>{
 
   return (
     <div className = 'app'>
-<Music/>
+
       <Button 
         class = 'bttn bttn_small'
         name = {<i className = 'fas fa-expand-arrows-alt'/>} 
