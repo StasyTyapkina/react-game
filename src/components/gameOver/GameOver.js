@@ -1,5 +1,6 @@
 import React from 'react'
 import './gameOver.css'
+import Button from '../button/Button'
 import soundGameOver from '../music/success.mp3';
 
 function GameOver(props) {
@@ -14,9 +15,10 @@ function GameOver(props) {
             <p>Winner is: {props.winner}</p>
         </div>
        
-        <button className="restart_bttn" onClick={props.onClick}>
-          Restart
-        </button>
+        <Button 
+          class = 'bttn bttn_big'
+          name = 'Restart' 
+          onClick={props.onClick} />
       </div>
     );
   }

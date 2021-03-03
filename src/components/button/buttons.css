@@ -1,6 +1,7 @@
+
 .button_section{
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .bttn{
@@ -8,14 +9,30 @@
     background-color:var(--color-black);
     font-size: 16px;
     color: var(--color-light);
-    margin: 10px 10px 0;
+    margin-top: 10px;
     padding: 5px;
     cursor: pointer;
+    font-weight: normal;
     letter-spacing: 1.5px;
-    width: 120px;
 }
 
 .bttn:hover {
     box-shadow: 1px 1px 25px 10px var(--color-yellow-rgba);
+    color: var(--color-yellow);
 }
 
+.bttn_middle{
+    margin: 10px 10px 0 10px;
+    width: 120px;
+}
+
+.fullScreen_bttn{
+    width: 30px;
+}
+
+.fullscreen-enabled .bttn_big{
+    width: 520px;
+}
+
+
+ 

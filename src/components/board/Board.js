@@ -5,8 +5,7 @@ import './board.css'
 import Square from '../square/Square'
 import calculateWinner from '../../winnerLogic'
 import GameOver from '../gameOver/GameOver'
-import StartButton from '../buttons/StartButton'
-import SettinsButton from '../buttons/SettinsButton'
+import Button from '../button/Button'
 
 import soundSquare from '../music/Chord_3.mp3';
 
@@ -57,8 +56,14 @@ const Board = () => {
                 ))}
             </div> 
             <div className = 'button_section'>
-                <StartButton onClick = {() => handleStart()} />
-                <SettinsButton />
+                <Button 
+                    class = 'bttn bttn_middle'
+                    name = 'New game' 
+                    onClick = {() => handleStart()} />
+                <Button 
+                    class = 'bttn bttn_middle'
+                    name = 'Setup' 
+                />
             </div> 
            
         </div>
