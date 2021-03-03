@@ -11,7 +11,7 @@ const App = ()=>{
 
   return (
     <div className = 'app'>
-
+<Music/>
       <Button 
         class = 'bttn bttn_small'
         name = {<i className = 'fas fa-expand-arrows-alt'/>} 

@@ -28,17 +28,14 @@ import './modal.css'
           onRequestClose={handleCloseModal}
           ariaHideApp={false}
           className="modal">
-
-        <p>Modal text!</p>
+        <p className = 'modal_text'>Modal text!</p>
         <Button 
           class = 'bttn bttn_small bttn_modal'
           name = {<i className="fas fa-times"/>} 
-          onClick={handleCloseModal} />
-        
+          onClick={handleCloseModal} /> 
       </Modal>
     </>
   );
-  
 }
 
 

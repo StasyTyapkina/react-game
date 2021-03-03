@@ -1,74 +1,58 @@
-import React, {useState} from 'react'
+import React, { useState }from 'react'
 import './music.css'
-import Play from "./Play";
-import Pause from "./Pause";
+import Switch from "react-switch";
 
 import mainTheme from "./main.mp3";
+import sound1 from "./Chord_3.mp3";
+import Button from '../button/Button'
 
 
-function Music() {
+const Music = () => {
+    const [checked, setChecked] = useState(false)
+    const [volume, setVolume] = useState(0.4)
 
-    const mainAudio = new Audio(mainTheme);
-
-    const playAudio = audioFile => {
-        audioFile.play();
+    function handleVolume(e) {
+      if(checked){
+        setVolume(e.target.value)
+      }
     }
 
-    const pauseAudio = audioFile => {
-        audioFile.pause();
-    }
 
-    const [play, setPlay] = useState(false)
-/*
-    return (
-        <div >
-          <audio id="audio">
-            <source src="./main.mp3" />
-          </audio>
-          
-          <div className="controls">
-            {play ? 
-              <Pause handleClick={() => {
-                  setPlay(false)
-                  pauseAudio(mainAudio)
-                }} /> :
-              <Play handleClick={() => {
-                  setPlay(true)
-                  playAudio(mainAudio)
-                  }
-                } />
-            }
-           
-          </div>
-        </div>
-      );
+  return (
+    <div>
 
-    return (
-      <div>
-        <button 
-            className = 'sound_bttn' 
-            title = 'Turn on sounds and music'
-            onClick={() =>{
-                playAudio(mainAudio)
-                toggleSound()
-            } }
-            
-            >
-                <i class = 'fas fa-volume-off'/>
-        </button>
-        <div className="sound_сontrol">                     
-            <input 
-                title="Sound volume" 
-                type="range" 
-                min="0" 
-                max="1" 
-                step="0.05" 
-                value="0.4" 
-                className="sound_control_slider"/>
-            <span className="sounds_value">40%</span>
-        </div>
+      <label>
+        <span>Switch with default style</span>
+        <Switch onChange={() => setChecked(!checked)} checked={checked} />
+      </label>
+     
+      <div  
+          className='key' 
+          onClick={() => {
+          document.getElementById('sound1').volume = volume; 
+          document.getElementById('sound1').play(); 
+          document.getElementById('sound1').currentTime = 0;
+          }}>
+                        
+          <span className='sound'>Hi-Hat</span>
+     </div>
+      <div className='sound_сontrol'>
+      
+          <label><i class="fas fa-volume-up" title="Sound volume"/>
+            <input type="range" 
+            min='0' 
+            max='1' 
+            value={volume} 
+            onChange={handleVolume} 
+            step='0.01' />
+            <span class="sounds_value">{`${Math.round(volume * 100)}  %`}</span>
+          </label>
+          <audio id='sound1' src={sound1}></audio>
+                  
       </div>
-    );*/
-  }
+    </div>
+  );
+        }
+
 
   export default Music
