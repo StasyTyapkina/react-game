@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Modal from 'react-modal';
 import Button from '../button/Button'
-import AudioSetup  from '../music/AudioSetup'
 import Music from '../music/Music'
 import './modal.css'
 
@@ -30,14 +29,15 @@ import './modal.css'
           onRequestClose={handleCloseModal}
           ariaHideApp={false}
           className="modal">
-        <p className = 'modal_text'>Modal text!</p>
+         
+          <Button 
+            class = 'bttn bttn_small bttn_modal'
+            name = {<i className="fas fa-times"/>} 
+            onClick={handleCloseModal} />
+
+          <h2 className = 'modal_text'>Setup</h2>
         
-        <Button 
-          class = 'bttn bttn_small bttn_modal'
-          name = {<i className="fas fa-times"/>} 
-          onClick={handleCloseModal} />
-          
-        <Music/>
+          <Music/>
         
       </Modal>
     </>

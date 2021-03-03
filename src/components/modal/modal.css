@@ -11,6 +11,10 @@
     animation-name: animate;
     animation-duration: 0.5s;
     align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @keyframes animate {
@@ -19,13 +23,14 @@
 }
 
 .bttn_modal {
-    float: right;
-    margin: -19px 2px 0 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
 }
 
 .modal_text{
     color: var(--color-black);
-    font-size: 16px;
+    font-size: 36px;
 }
 
 
