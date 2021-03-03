@@ -7,6 +7,8 @@ import calculateWinner from '../../winnerLogic'
 import GameOver from '../gameOver/GameOver'
 import Button from '../button/Button'
 
+import ModalWindow from '../modal/ModalWindow'
+
 import soundSquare from '../music/Chord_3.mp3';
 
 const Board = () => {
@@ -46,6 +48,8 @@ const Board = () => {
             <h2>
                 {gameStatus}
             </h2>
+
+           
             
             <div className = 'board'>
                 {squares.map((square, index) => (
@@ -60,10 +64,8 @@ const Board = () => {
                     class = 'bttn bttn_middle'
                     name = 'New game' 
                     onClick = {() => handleStart()} />
-                <Button 
-                    class = 'bttn bttn_middle'
-                    name = 'Setup' 
-                />
+               
+                <ModalWindow />
             </div> 
            
         </div>

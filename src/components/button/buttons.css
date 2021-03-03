@@ -26,8 +26,9 @@
     width: 120px;
 }
 
-.fullScreen_bttn{
+.bttn_small{
     width: 30px;
+    letter-spacing: 0;
 }
 
 .fullscreen-enabled .bttn_big{

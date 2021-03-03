@@ -13,7 +13,7 @@ const App = ()=>{
     <div className = 'app'>
 
       <Button 
-        class = 'bttn fullScreen_bttn'
+        class = 'bttn bttn_small'
         name = {<i className = 'fas fa-expand-arrows-alt'/>} 
         title = 'Click for full screen'
         onClick = {handle.enter} 
@@ -26,7 +26,7 @@ const App = ()=>{
       </FullScreen>
 
       <Footer/>
-      
+
     </div>
   )
 }
