@@ -24,11 +24,9 @@ const Board = () => {
         if(newSquares[i] || winner) return
          
         newSquares[i] = isXNext ? 'X' : 'O'
-        console.log(isXNext)
         setSquares(newSquares)
         setIsXNext(!isXNext)
         play()
-        console.log(i)
     }
 
     useEffect(() => {
@@ -37,12 +35,7 @@ const Board = () => {
 
     useEffect(() => {
         const onKeypress = event  => {
-            if (event.code === "Numpad1" ) {
-              console.log("Enter key was pressed. Run your function.");
-              handleClick(6)
-            }
-
-        
+                  
             switch(event.code) {
                 case "Digit1":
                 case "Numpad7":
@@ -96,7 +89,8 @@ const Board = () => {
                     handleStart()                     
                         break;
 
-                case "Backspace":
+                case "Digit0":
+                case "Numpad0":
                     handlePrevMove()                     
                         break;
 
@@ -109,7 +103,7 @@ const Board = () => {
         return () => {
           document.removeEventListener('keypress', onKeypress);
         };
-      }, [squares,isXNext]);
+      }, [squares,isXNext, prevSquareIndex]);
 
     function handleStart() {
         setSquares(Array(9).fill(null));
