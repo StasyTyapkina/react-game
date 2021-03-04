@@ -28,7 +28,6 @@ const Board = () => {
         setSquares(newSquares)
         setIsXNext(!isXNext)
         play()
-
     }
 
     useEffect(() => {
@@ -41,7 +40,8 @@ const Board = () => {
         winner = null 
     }
 
-    function handlePrevMove(i) {
+    function handlePrevMove() {
+        if(winner) return
         const newSquares = [...squares]
         newSquares[prevSquareIndex] = isXNext ? 'O' : 'X'
         setIsXNext(!isXNext)

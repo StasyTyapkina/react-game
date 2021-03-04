@@ -7,6 +7,7 @@ function GameOver(props) {
 
   const mainAudio = new Audio(soundGameOver);
   mainAudio.play()
+ 
 
     return (
       <div className="game_over">
@@ -18,7 +19,8 @@ function GameOver(props) {
         <Button 
           class = 'bttn bttn_big'
           name = 'Restart' 
-          onClick={props.onClick} />
+          onClick = {props.onClick}
+          />
       </div>
     );
   }
