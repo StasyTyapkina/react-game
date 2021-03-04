@@ -36,6 +36,13 @@ import './modal.css'
             onClick={handleCloseModal} />
 
           <h2 className = 'modal_text'>Setup</h2>
+          <p className = 'modal_p'>Вы можете управлять игрой при помощи своей клавиатуры. 
+          <br/>
+          Для этого используйте цифровые клавиши или цифровой блок 1 - 9.
+          <br/>
+          Чтобы начать новую игру - нажмите Пробел или Enter. 
+          <br/>
+          Чтобы отменить последний ход - нажмите Backspase</p>
         
           <Music/>
         

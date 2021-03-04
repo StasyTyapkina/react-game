@@ -24,15 +24,92 @@ const Board = () => {
         if(newSquares[i] || winner) return
          
         newSquares[i] = isXNext ? 'X' : 'O'
-        
+        console.log(isXNext)
         setSquares(newSquares)
         setIsXNext(!isXNext)
         play()
+        console.log(i)
     }
 
     useEffect(() => {
         localStorage.setItem('squaresLocalStorage', JSON.stringify(squares));
     }, [squares]);
+
+    useEffect(() => {
+        const onKeypress = event  => {
+            if (event.code === "Numpad1" ) {
+              console.log("Enter key was pressed. Run your function.");
+              handleClick(6)
+            }
+
+        
+            switch(event.code) {
+                case "Digit1":
+                case "Numpad7":
+                    handleClick(0)                   
+                  break;
+
+                case "Digit2":
+                case "Numpad8":
+                   handleClick(1)                
+                  break;
+
+                case "Digit3":
+                case "Numpad9":
+                    handleClick(2)            
+                  break;
+
+
+                case "Digit4":
+                case "Numpad4":
+                    handleClick(3)                       
+                      break;
+
+                case "Digit5":
+                case "Numpad5":
+                    handleClick(4)                    
+                      break;
+
+                case "Digit6":
+                case "Numpad6":
+                    handleClick(5)                     
+                      break;
+
+
+                case "Digit7":
+                case "Numpad1":
+                    handleClick(6)                       
+                        break;
+
+                case "Digit8":
+                case "Numpad2":
+                    handleClick(7)                    
+                        break;
+
+                case "Digit9":
+                case "Numpad3":
+                    handleClick(8)                     
+                        break;
+
+                case "Space":
+                case "Enter":
+                    handleStart()                     
+                        break;
+
+                case "Backspace":
+                    handlePrevMove()                     
+                        break;
+
+                  default:
+              } 
+          };
+      
+        document.addEventListener('keypress', onKeypress);
+      
+        return () => {
+          document.removeEventListener('keypress', onKeypress);
+        };
+      }, [squares,isXNext]);
 
     function handleStart() {
         setSquares(Array(9).fill(null));
