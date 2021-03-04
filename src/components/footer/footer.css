@@ -13,7 +13,7 @@ a:hover{
 .footer{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .logo{
@@ -23,6 +23,7 @@ a:hover{
 
 .link{
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .copyright{

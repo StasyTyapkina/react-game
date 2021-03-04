@@ -4,12 +4,14 @@
   --color-yellow: rgb(243, 227, 4);
   --color-yellow-light:rgb(230, 219, 78);
   --color-yellow-rgba: rgba(240, 225, 14, 0.3);
+  background: var(--color-black);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: inherit;
 }
 
 button, 
@@ -27,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background: var(--color-black);
+
   color: var(--color-light);
 }
 

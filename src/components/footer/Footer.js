@@ -2,6 +2,7 @@ import React from 'react'
 import './footer.css'
 import rsLogo from './rs_school_logo.png'
 import gitLogo from './GitHub.png'
+import ThemeSwitch from '../ThemeSwitch';
 
 const Footer = () => {
     return(
@@ -35,6 +36,9 @@ const Footer = () => {
                     src = {gitLogo} 
                     alt = 'logo'/>
             </a>
+
+            <ThemeSwitch preserveRaster = 'true'/>
+
         </div>
     ) 
   }

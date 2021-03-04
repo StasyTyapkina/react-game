@@ -4,13 +4,13 @@ import Board from './components/board/Board'
 import Button from './components/button/Button'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
-
 const App = ()=>{
-  const handle = useFullScreenHandle();
+  const handle = useFullScreenHandle()
 
   return (
+ 
     <div className = 'app'>
-
+     
       <Button 
         class = 'bttn bttn_small'
         name = {<i className = 'fas fa-expand-arrows-alt'/>} 

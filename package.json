@@ -15,7 +15,9 @@
     "react-modal": "^3.12.1",
     "react-scripts": "4.0.3",
     "react-switch": "^6.0.0",
+    "react-theme-switch": "^0.1.7",
     "react-toggle-button": "^2.2.0",
+    "styled-components": "^5.2.1",
     "use-sound": "^2.0.1",
     "web-vitals": "^1.1.0"
   },
