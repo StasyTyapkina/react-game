@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-game/static/css/main.c3c72925.chunk.css",
-    "main.js": "/react-game/static/js/main.a4c46929.chunk.js",
-    "main.js.map": "/react-game/static/js/main.a4c46929.chunk.js.map",
+    "main.css": "/react-game/static/css/main.bb7f85bc.chunk.css",
+    "main.js": "/react-game/static/js/main.40a0df96.chunk.js",
+    "main.js.map": "/react-game/static/js/main.40a0df96.chunk.js.map",
     "runtime-main.js": "/react-game/static/js/runtime-main.eb0fd2c2.js",
     "runtime-main.js.map": "/react-game/static/js/runtime-main.eb0fd2c2.js.map",
-    "static/js/2.8cec6b4f.chunk.js": "/react-game/static/js/2.8cec6b4f.chunk.js",
-    "static/js/2.8cec6b4f.chunk.js.map": "/react-game/static/js/2.8cec6b4f.chunk.js.map",
+    "static/js/2.db70fe88.chunk.js": "/react-game/static/js/2.db70fe88.chunk.js",
+    "static/js/2.db70fe88.chunk.js.map": "/react-game/static/js/2.db70fe88.chunk.js.map",
     "static/js/3.232ca545.chunk.js": "/react-game/static/js/3.232ca545.chunk.js",
     "static/js/3.232ca545.chunk.js.map": "/react-game/static/js/3.232ca545.chunk.js.map",
     "index.html": "/react-game/index.html",
-    "static/css/main.c3c72925.chunk.css.map": "/react-game/static/css/main.c3c72925.chunk.css.map",
-    "static/js/2.8cec6b4f.chunk.js.LICENSE.txt": "/react-game/static/js/2.8cec6b4f.chunk.js.LICENSE.txt",
+    "static/css/main.bb7f85bc.chunk.css.map": "/react-game/static/css/main.bb7f85bc.chunk.css.map",
+    "static/js/2.db70fe88.chunk.js.LICENSE.txt": "/react-game/static/js/2.db70fe88.chunk.js.LICENSE.txt",
     "static/js/3.232ca545.chunk.js.LICENSE.txt": "/react-game/static/js/3.232ca545.chunk.js.LICENSE.txt",
     "static/media/Chord_3.ccd52db0.mp3": "/react-game/static/media/Chord_3.ccd52db0.mp3",
     "static/media/main.2950bb0c.mp3": "/react-game/static/media/main.2950bb0c.mp3",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.eb0fd2c2.js",
-    "static/js/2.8cec6b4f.chunk.js",
-    "static/css/main.c3c72925.chunk.css",
-    "static/js/main.a4c46929.chunk.js"
+    "static/js/2.db70fe88.chunk.js",
+    "static/css/main.bb7f85bc.chunk.css",
+    "static/js/main.40a0df96.chunk.js"
   ]
 }
