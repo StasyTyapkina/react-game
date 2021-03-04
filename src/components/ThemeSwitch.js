@@ -10,8 +10,8 @@ const ThemeSwitch = ({ preserveRasters = true, storeKey = 'ThemeSwitch' }) => {
 
   const isDeclarationSupported = (property, value) => {
     const prop = property + ':',
-      el = document.createElement('test'),
-      mStyle = el.style;
+    el = document.createElement('test'),
+    mStyle = el.style;
     el.style.cssText = prop + value;
     return mStyle[property];
   };
