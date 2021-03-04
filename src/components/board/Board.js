@@ -10,23 +10,25 @@ import soundSquare from '../music/Chord_3.mp3';
 
 const Board = () => {
     let storedSquares  = JSON.parse(localStorage.getItem('squaresLocalStorage'));
-
     const [squares, setSquares] = useState( storedSquares || Array(9).fill(null) )
     const [isXNext, setIsXNext] = useState(true)
-
     let winner = calculateWinner(squares)
     const [play] = useSound(soundSquare);
 
+    const [prevSquareIndex, setPrevSquareIndex] = useState(null)
+
     function handleClick(i){
         const newSquares = [...squares]
-        const winner = calculateWinner(squares)
-        if(newSquares[i] || winner) return
+        setPrevSquareIndex(i)
 
+        if(newSquares[i] || winner) return
+         
         newSquares[i] = isXNext ? 'X' : 'O'
         
         setSquares(newSquares)
         setIsXNext(!isXNext)
         play()
+
     }
 
     useEffect(() => {
@@ -38,7 +40,15 @@ const Board = () => {
         setIsXNext(!isXNext)
         winner = null 
     }
-   
+
+    function handlePrevMove(i) {
+        const newSquares = [...squares]
+        newSquares[prevSquareIndex] = isXNext ? 'O' : 'X'
+        setIsXNext(!isXNext)
+        newSquares[prevSquareIndex] = null
+        setSquares(newSquares)
+    }
+  
 
     const gameStatus = winner ? <GameOver 
                                     winner = {winner}
@@ -51,9 +61,7 @@ const Board = () => {
             <h2>
                 {gameStatus}
             </h2>
-
-           
-            
+               
             <div className = 'board'>
                 {squares.map((square, index) => (
                     <Square 
@@ -67,6 +75,12 @@ const Board = () => {
                     class = 'bttn bttn_middle'
                     name = 'New game' 
                     onClick = {() => handleStart()} />
+
+                    <Button 
+                    class = 'bttn bttn_small'
+                    name = {<i className="fas fa-undo-alt"/>}
+                    title = 'Click to return to the previous move'
+                    onClick = {() => handlePrevMove()} />
                
                 <ModalWindow />
             </div> 
