@@ -41,7 +41,7 @@ const Board = () => {
     }
 
     function handlePrevMove() {
-        if(winner) return
+        if(winner || prevSquareIndex === null ) return
         const newSquares = [...squares]
         newSquares[prevSquareIndex] = isXNext ? 'O' : 'X'
         setIsXNext(!isXNext)
